@@ -2,8 +2,8 @@ import React, {useState} from 'react'
 import styled from "styled-components"
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import { selectCars } from '../features/car/carSlice'
-import {useSelector} from 'react-redux'
+import { selectCars } from '../features/car/carSlice';
+import {useSelector} from 'react-redux';
 
 
 function Header() {
@@ -17,7 +17,7 @@ function Header() {
             <img src="/images/logo.svg" alt="" />
         </a>
         <Menu>
-            {cars && cars.map((car , index =>(
+            {cars && cars.map((car, index) =>(
                      <a key={index} href="#">{car}</a>
 
                 ))}
@@ -26,19 +26,18 @@ function Header() {
         <RightMenu>
             <a href="#">Shop</a>
             <a href="#">Tesla Account</a>
-            <CustomMenu onClick={() => setBurgerState(true)} />
+            <CustomMenu onClick={() => setBurgerStatus(true)} />
 
         </RightMenu>
         <BurgerNav show={burgerStatus} >
             <CloseWrapper>
-                <CustomClose onClick={() => setBurgerState(false)} />
+                <CustomClose onClick={() => setBurgerStatus(false)} />
 
             </CloseWrapper>
-            {cars && cars.map((car , index =>(
-                                 <li key={index} ><a href="#">{car} </a></li>
+            {cars && cars.map((car , index) =>(
+                <li key={index} ><a href="#">{car} </a></li>
 
-
-                ))}
+            ))}
             
             <li><a href="#">Existing Inventory</a></li>
             <li><a href="#">Used Inventory</a></li>
@@ -117,11 +116,11 @@ const BurgerNav = styled.div `
     flex-direction: column;
     text-align: start;
     transform: ${props => props.show ? 'translateX(0)': 'translateX(100%)'};
-    transition: transform 0.2 ;
+    transition: transform 0.2s ;
 
     li {
         padding: 15px 0;
-        border-bottom: 1px solid rgba(0, 0, 0,.2);
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
 
         a {
             font-weight: 600;

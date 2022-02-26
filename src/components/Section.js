@@ -1,14 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 
+
 function Section({title, description, leftBtnText, rightBtnText, backgroundImg}) {
     return (
     <Wrap bgImage={backgroundImg}>
-        <ItemText>
-            <h1>{title}</h1>
-            <p> {description} </p>
-        </ItemText>
+        
+            <ItemText>
+                <h1>{title}</h1>
+                <p> {description} </p>
+            </ItemText>
+        
         <Buttons>
+        
         <ButtonGroup>
             <LeftButton>
                 {leftBtnText}
@@ -21,9 +25,10 @@ function Section({title, description, leftBtnText, rightBtnText, backgroundImg})
 
             
         </ButtonGroup>
+        
         <DownArrow src="/images/down-arrow.svg" />
         </Buttons>
-
+                
     </Wrap>
   )
 }
@@ -31,6 +36,7 @@ function Section({title, description, leftBtnText, rightBtnText, backgroundImg})
 export default Section
 
 const Wrap = styled.div`
+    
     width: 100vw;
     height: 100vh;
     background-size: cover;
