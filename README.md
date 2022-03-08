@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, you can run if you want to live: https://tesla-clone-4060c.web.app/
 
 ### `npm start`
 
